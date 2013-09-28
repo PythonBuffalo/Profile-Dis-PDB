@@ -39,14 +39,14 @@ or also just `import pdb; pdb.set_trace()` in the code where we want the debuggi
 to start up and take over execution of the code.
 
 For this example try the following:
-1. `l` - show the surrounding code of where you currently are
-2. `s` - step into the `recursive` function
-3. `n` - move one line further in the `recursive` function
-4. `a` - show the argument list for the `recursive` function
-5. `print locals()` - print all local variables
-6. `n` - move to the next execution line, notice it skips the body of the if statement because the if evaluates to `False`
-7. `n` - move to the next execution line, we expect this to skip the body of the if since `5` is not even (hint: this is where our bug is located)
-8. `l` - to see where we are in the code, which in this case we are in the body of the if we didn't expect to be in
+ 1. `l` - show the surrounding code of where you currently are
+ 2. `s` - step into the `recursive` function
+ 3. `n` - move one line further in the `recursive` function
+ 4. `a` - show the argument list for the `recursive` function
+ 5. `print locals()` - print all local variables
+ 6. `n` - move to the next execution line, notice it skips the body of the if statement because the if evaluates to `False`
+ 7. `n` - move to the next execution line, we expect this to skip the body of the if since `5` is not even (hint: this is where our bug is located)
+ 8. `l` - to see where we are in the code, which in this case we are in the body of the if we didn't expect to be in
 
 BUG FOUND! oops, it is `if n % 2 == 0:` not `if n % 2:`
 
